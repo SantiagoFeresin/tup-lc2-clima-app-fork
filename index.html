@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TUP LC2 - TP Integrador</title>
+    <title>Clima App</title>
+    <link rel="shortcut icon" href="img/solynube.svg" type="image/x-icon">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
 </head>
@@ -24,13 +25,39 @@
     </header>
     <!-- Contenido principal de la página -->
     <main>
-        <h2>Mi primera App!</h2>
+        <h2>Clima Ahora</h2>
         <section id="form-city-list">
-            <!-- Sección donde se debe colocar el formulario, con el select y el
-botón de consultar -->
+            <!-- Sección donde se debe colocar el formulario, con el select y el botón de consultar -->
+            <form action="">
+                <table>
+                    <tr>
+                        <td>
+                            <select name="Seleccionar ciudad" id="SelecCiudad">
+                                <option value="" disabled selected>Seleccionar Ciudad</option>
+                                <option value="ROSARIO">Rosario</option>
+                                <option value="RAFAELA">Rafaela</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="submit" value="Consultar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </section>
         <section id="section-weather-result">
             <!-- Sección donde se debe mostrar el clima de la ciudad -->
+            <div class="card">
+                <h3>
+                    Rosario
+                </h3>
+                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Foto Ciudad">
+                <p>Temperatura: 25.31º</p>
+                <p>Sensación térmica: 24.65º </p>
+                <p>Humedad: 29%</p>
+                <p>Velocidad del viento: 4.63km/h</p>
+                <p>Presión: 1011P</p>
+            </div>
         </section>
     </main>
     <footer>

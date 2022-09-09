@@ -2,7 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans', 'Unicode', 'Geneva', 'Verdana', 'sans-serif';
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans'
+        Unicode', ' Geneva', ' Verdana', ' sans-serif';
 
 }
 
@@ -24,14 +25,12 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-
-
 }
 
 button,
 a {
     user-select: none;
-    -webkit-user-select:none;
+    -webkit-user-select: none;
 }
 
 header {
@@ -61,7 +60,7 @@ nav li a {
     color: var(--color-active);
 }
 
-nav li.current-page a {
+nav li.current-page a{
     color: var(--color-theme);
     background-color: var(--color-active);
     pointer-events: none;
@@ -81,13 +80,10 @@ h1 {
     color: white;
 }
 
-
 h1>img {
     width: 70px;
     vertical-align: middle;
 }
-
-
 
 h2 {
     color: var(--color-theme);
