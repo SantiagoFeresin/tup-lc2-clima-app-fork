@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans'
-        Unicode', ' Geneva', ' Verdana', ' sans-serif';
+        'Unicode', ' Geneva', ' Verdana', ' sans-serif';
 
 }
 
@@ -12,8 +12,7 @@
     --color-theme: #00594c;
     --color-active: #5df2d6;
     --color-back-active: #04957d;
-    --color-gradient: linear-gradient(to right, var(--color-theme),
-            var(--color-back-active));
+    --color-gradient: linear-gradient(to right, var(--color-theme), var(--color-back-active));
 }
 
 body {
