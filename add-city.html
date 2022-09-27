@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="img/solynube.svg" type="image/x-icon">
     <!-- Estilos CSS --> 
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/add-city.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="index.html">Mi App</a></li>
+                <li><a href="index.html">Clima</a></li>
                 <li class="current-page"><a href="/add-city.html">Ciudad</a></li>
                 <li><a href="/help.html">Ayuda</a></li>
             </ul>
@@ -34,17 +35,27 @@
                     <tr>
                         <td>
                             <label for="agregarCiudad">Ingrese la ciudad a agregar:</label>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <input type="text" id="agregarCiudad" name="agregarCiudad">
                         </td>
                     </tr>
                     <td>
-                        <input type="submit" value="Agregar">
+                        <input type="submit" value="Agregar" class="boton">
                     </td>
                     <tr>
                     </tr>
                 </table>
             </form>
         </section>
+            <p class="success">Ciudad agregada con éxito</p><br>
+            
+            <p class="error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar </p><br>
+             
+            <p class="warning">La ciudad ingresada ya se encuentra almacenada</p><br>
     </main>
     <footer>
         <p>

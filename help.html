@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="img/solynube.svg" type="image/x-icon">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/help.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="index.html">Mi App</a></li>
+                <li><a href="index.html">Clima</a></li>
                 <li><a href="/add-city.html">Ciudad</a></li>
                 <li class="current-page"><a href="/help.html">Ayuda</a></li>
             </ul>
@@ -29,7 +30,7 @@
     <main>
         <h2>Ayuda Clima App v.1.0</h2>
         <p>Esta App te permite consultar el clima de una ciudad en particular usando la
-            API de<a href="https://openweathermap.org/api”" target="_blank">OpenWeatherMap</a>.
+            API de <a href="https://openweathermap.org/api”" target="_blank">OpenWeatherMap</a>.
         </p>
         <p>
             Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luego
@@ -42,6 +43,9 @@
                         <td>
                             <label for="Nombre">Nombre:</label>
                         </td>
+
+                    </tr>
+                    <tr>
                         <td>
                             <input type="text" id="Nombre" name="Nombre">
                         </td>
@@ -50,6 +54,9 @@
                         <td>
                            <label for="Email">Email:</label>
                         </td>
+                        
+                    </tr>
+                    <tr>
                         <td>
                             <input type="email" id="Email" name="Email">
                         </td>
@@ -58,11 +65,14 @@
                         <td>
                             <label for="Mensaje">Mensaje:</label>
                         </td>
+                        
+                    </tr>
+                    <tr>
                         <td>
                             <textarea name="Mensaje" id="Mensaje" cols="30" rows="10"></textarea>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="botones">
                         <td>
                             <button type="reset">Limpiar</button>
                         </td>
@@ -72,6 +82,9 @@
                     </tr>
                 </table>
             </form>
+        </section>
+        <section class="alerta">
+            <p >Ingrese un&nbsp;<b>Email</b>&nbsp;válido</p>
         </section>
     </main>
     <footer>

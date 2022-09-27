@@ -1,0 +1,38 @@
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones button{
+    background-color:#00594c;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 7px;
+    padding: 6px;
+    margin-bottom: 15px;
+}
+
+input{
+    border-radius: 5px;
+}
+
+textarea{
+    border-radius: 7px;
+    margin-bottom: 5px;
+}
+
+.alerta p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #dc3545;
+    border-radius: 15px;
+    padding-left:15%;
+    padding-right: 15%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:white;
+    margin-bottom: 15px;
+}
