@@ -7,10 +7,10 @@
     <title>Clima App</title>
     <link rel="shortcut icon" href="img/solynube.svg" type="image/x-icon">
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/pages/index.js" defer></script>
-    <script src="js/common.js" defer></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/common.js" defer></script>
+    <script src="./js/pages/index.js" defer></script>
 </head>
 <body>
 
@@ -39,12 +39,10 @@
                         <td>
                             <select name="Seleccionar ciudad" id="SelecCiudad">
                                 <option value="" disabled selected>Seleccionar Ciudad</option>
-                                <option value="ROSARIO">Rosario</option>
-                                <option value="RAFAELA">Rafaela</option>
                             </select>
                         </td>
                         <td>
-                            <input type="submit" value="Consultar">
+                            <input type="button" value="Consultar" onclick="consultarAPIclima()">
                         </td>
                     </tr>
                 </table>
@@ -53,15 +51,15 @@
         <section id="section-weather-result">
             <!-- Sección donde se debe mostrar el clima de la ciudad -->
             <div class="card">
-                <h3>
+                <h3 id="ciudad">
                     Rosario
                 </h3>
-                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Foto Ciudad">
-                <p>Temperatura: 25.31º</p>
-                <p>Sensación térmica: 24.65º </p>
-                <p>Humedad: 29%</p>
-                <p>Velocidad del viento: 4.63km/h</p>
-                <p>Presión: 1011P</p>
+                <img id="imagen" src="http://openweathermap.org/img/wn/01d@2x.png" alt="Foto Ciudad">
+                <p id="temperatura">Temperatura: 25.31º</p>
+                <p id="st">Sensación térmica: 24.65º </p>
+                <p id="hum">Humedad: 29%</p>
+                <p id="viento">Velocidad del viento: 4.63km/h</p>
+                <p id="presion">Presión: 1011P</p>
             </div>
         </section>
     </main>

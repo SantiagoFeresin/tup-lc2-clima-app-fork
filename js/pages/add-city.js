@@ -6,11 +6,25 @@ function getCitiesFromLocalStorage() {
         cities = []; 
     } 
     return cities; 
- } 
-  
- function addNewCityToLocalStorage() { 
+}
+
+function addNewCityToLocalStorage() { 
     let cities = getCitiesFromLocalStorage(); 
-    cities.push(document.getElementById("agregarCiudad").value); 
+    let ciudadAgregada = document.getElementById("agregarCiudad").value
+    if (cities.includes(ciudadAgregada)) {
+        document.getElementById("Success").style.display = "none";
+        document.getElementById("Error").style.display = "none";
+        document.getElementById("Warning").style.display = "block";
+    } else if (1) {
+        document.getElementById("Success").style.display = "none";
+        document.getElementById("Error").style.display = "block";
+        document.getElementById("Warning").style.display = "none";
+    } else {
+        cities.push(ciudadAgregada);
+        document.getElementById("Success").style.display = "block";
+        document.getElementById("Error").style.display = "none";
+        document.getElementById("Warning").style.display = "none";
+    }
     localStorage.setItem("CITIES", JSON.stringify(cities)); 
  }
  
