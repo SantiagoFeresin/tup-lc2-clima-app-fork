@@ -9,6 +9,8 @@
     <!-- Estilos CSS --> 
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/add-city.css">
+    <script src="js/pages/add-city.js" defer></script>
+    <script src="js/common.js" defer></script>
 </head>
 
 <body>
@@ -44,18 +46,18 @@
                         </td>
                     </tr>
                     <td>
-                        <input type="submit" value="Agregar" class="boton">
+                        <input type="submit" value="Agregar" class="boton" onclick="añadirciudad()">
                     </td>
                     <tr>
                     </tr>
                 </table>
             </form>
         </section>
-            <p class="success">Ciudad agregada con éxito</p><br>
+            <p class="success" id="Success">Ciudad agregada con éxito</p><br>
             
-            <p class="error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar </p><br>
+            <p class="error" id="Error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar </p><br>
              
-            <p class="warning">La ciudad ingresada ya se encuentra almacenada</p><br>
+            <p class="warning" id="Warning">La ciudad ingresada ya se encuentra almacenada</p><br>
     </main>
     <footer>
         <p>
