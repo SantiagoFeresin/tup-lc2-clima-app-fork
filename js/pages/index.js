@@ -41,6 +41,6 @@ async function consultarAPIclima() {
         document.getElementById("feels_like").innerHTML = `Sensación térmica: ${objeto.main.feels_like}°`;
         document.getElementById("humidity").innerHTML = `Humedad: ${objeto.main.humidity}%`;
         document.getElementById("wind").innerHTML = `Velocidad del viento: ${(objeto.wind.speed * 1.60934).toFixed(2)}km/h`;
-        document.getElementById("pressure").innerHTML = `Presión: ${objeto.main.pressure}P`;
+        document.getElementById("pressure").innerHTML = `Presión: ${objeto.main.pressure} P`;
     }
 }
