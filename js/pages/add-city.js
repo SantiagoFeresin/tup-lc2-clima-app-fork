@@ -15,7 +15,7 @@ function addNewCityToLocalStorage() {
         document.getElementById("Success").style.display = "none";
         document.getElementById("Error").style.display = "none";
         document.getElementById("Warning").style.display = "block";
-    } else if (1) {
+    } else if (0) {
         document.getElementById("Success").style.display = "none";
         document.getElementById("Error").style.display = "block";
         document.getElementById("Warning").style.display = "none";

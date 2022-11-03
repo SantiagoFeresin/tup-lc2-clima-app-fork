@@ -17,9 +17,8 @@
 input{
     border-radius: 5px;
     padding: 6px;
-    padding-right: 30%;
+    padding-right: 40%;
 }
-
 
 textarea{
     border-radius: 7px;
@@ -41,4 +40,5 @@ textarea{
     padding-bottom: 10px;
     color:white;
     margin-bottom: 15px;
+    display: none;
 }

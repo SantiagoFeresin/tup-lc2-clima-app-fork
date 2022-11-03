@@ -30,9 +30,11 @@ async function consultarAPIclima() {
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=a39893ad1a88e0da7a7a9b7d373a631f&units=metric&lang=es`;
 
         respuesta = await fetch(url);
+        var jsonresp = await respuesta.json();
+
     } catch (error) {
         console.log("error");
     } finally {
-        console.log(respuesta.JSON);
+        console.log(jsonresp);
     }
 }
