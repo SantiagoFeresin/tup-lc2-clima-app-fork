@@ -30,11 +30,17 @@ async function consultarAPIclima() {
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=a39893ad1a88e0da7a7a9b7d373a631f&units=metric&lang=es`;
 
         respuesta = await fetch(url);
-        var jsonresp = await respuesta.json();
+        objeto = await respuesta.json();
 
     } catch (error) {
-        console.log("error");
+        document.getElementById("card").style.display = "none"
     } finally {
-        console.log(jsonresp);
+        document.getElementById("card").style.display = "block"
+        document.getElementById("ciudad").innerHTML = objeto.name;
+        document.getElementById("temp").innerHTML = `Temperatura: ${objeto.main.temp}°`;
+        document.getElementById("feels_like").innerHTML = `Sensación térmica: ${objeto.main.feels_like}°`;
+        document.getElementById("humidity").innerHTML = `Humedad: ${objeto.main.humidity}%`;
+        document.getElementById("wind").innerHTML = `Velocidad del viento: ${(objeto.wind.speed * 1.60934).toFixed(2)}km/h`;
+        document.getElementById("pressure").innerHTML = `Presión: ${objeto.main.pressure}P`;
     }
 }
