@@ -1,62 +1,34 @@
-*{
+* {
     text-align: center;
 }
 
-input{
+input {
     border-radius: 5px;
     padding: 8px;
+    width: 230px;
     margin-bottom: 5px;
 }
 
-.boton{
-    background-color:#00594c;
+.boton {
+    background-color: #00594c;
     font-weight: bold;
-    font-size: 10px;
+    border-width: 0px;
     color: #fff;
     border-radius: 10px;
-    padding: 8px;
+    padding: 12px;
     align-self: center;
     margin-bottom: 30px;
 }
 
-#Success{
+#result {
     text-align: center;
-    background-color:#28a745 ;
-    font-size: 10px;
+    font-size: 15px;
     border-radius: 15px;
     margin-top: 30px;
-    margin-right: 30%;
-    margin-left: 30%;
+    margin-right: 300px;
+    margin-left: 300px;
     margin-bottom: 30px;
     padding: 15px;
-    color:white;
-    display: none;
-}
-
-#Error{
-    text-align: center;
-    background-color: #dc3545;
-    font-size: 10px;
-    border-radius: 15px;
-    margin-top: 30px;
-    margin-right: 30%;
-    margin-left: 30%;
-    margin-bottom: 30px;
-    padding: 15px;
-    color:white;
-    display: none;
-}
-
-#Warning{
-    text-align: center;
-    background-color:#ffc107 ;
-    font-size: 10px;
-    border-radius: 15px;
-    margin-top: 30px;
-    margin-right: 30%;
-    margin-left: 30%;
-    margin-bottom: 30px;
-    padding: 15px;
-    color:white;
+    color: white;
     display: none;
 }

@@ -6,25 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima App</title>
     <link rel="shortcut icon" href="img/solynube.svg" type="image/x-icon">
-    <!-- Estilos CSS --> 
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/add-city.css">
-    <script src="js/common.js" defer></script>
-    <script src="js/pages/add-city.js" defer></script>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/add-city.css">
+    <script src="./js/common.js" defer></script>
+    <script src="./js/pages/add-city.js" defer></script>
 </head>
 
 <body>
     <header>
-        
         <h1>
             <img src="img/solynube.svg" alt="SolYNube" width="30px" width="30px">
             <span>Clima App</span>
         </h1>
         <nav>
             <ul>
-                <li><a href="index.html">Clima</a></li>
-                <li class="current-page"><a href="/add-city.html">Ciudad</a></li>
-                <li><a href="/help.html">Ayuda</a></li>
+                <li><a href="./index.html">Clima</a></li>
+                <li class="current-page"><a href="./add-city.html">Agregar Ciudad</a></li>
+                <li><a href="./help.html">Ayuda</a></li>
             </ul>
         </nav>
     </header>
@@ -37,7 +36,6 @@
                     <tr>
                         <td>
                             <label for="agregarCiudad">Ingrese la ciudad a agregar:</label>
-                            
                         </td>
                     </tr>
                     <tr>
@@ -46,18 +44,14 @@
                         </td>
                     </tr>
                     <td>
-                        <input type="button" value="Agregar" class="boton" onclick="addNewCityToLocalStorage()">
+                        <button type="button" value="Agregar" class="boton" onclick="addNewCityToLocalStorage()">Agregar</button>
                     </td>
                     <tr>
                     </tr>
                 </table>
             </form>
         </section>
-            <p class="success" id="Success">Ciudad agregada con éxito</p><br>
-            
-            <p class="error" id="Error">Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar </p><br>
-             
-            <p class="warning" id="Warning">La ciudad ingresada ya se encuentra almacenada</p><br>
+        <div id="result" class="result"></div>
     </main>
     <footer>
         <p>

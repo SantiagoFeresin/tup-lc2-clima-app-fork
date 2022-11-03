@@ -11,19 +11,17 @@ function getCitiesFromLocalStorage() {
 function addNewCityToLocalStorage() { 
     let cities = getCitiesFromLocalStorage(); 
     let ciudadAgregada = document.getElementById("agregarCiudad").value
+    document.getElementById("result").style.display = "block"
     if (cities.includes(ciudadAgregada)) {
-        document.getElementById("Success").style.display = "none";
-        document.getElementById("Error").style.display = "none";
-        document.getElementById("Warning").style.display = "block";
+        document.getElementById("result").innerHTML = "La ciudad ingresada ya se encuentra almacenada"
+        document.getElementById("result").style.backgroundColor = "#ffc107"
     } else if (0) {
-        document.getElementById("Success").style.display = "none";
-        document.getElementById("Error").style.display = "block";
-        document.getElementById("Warning").style.display = "none";
+        document.getElementById("result").innerHTML = "Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar"
+        document.getElementById("result").style.backgroundColor = "#dc3545"
     } else {
         cities.push(ciudadAgregada);
-        document.getElementById("Success").style.display = "block";
-        document.getElementById("Error").style.display = "none";
-        document.getElementById("Warning").style.display = "none";
+        document.getElementById("result").innerHTML = "Ciudad agregada con éxito"
+        document.getElementById("result").style.backgroundColor = "#28a745"
     }
     localStorage.setItem("CITIES", JSON.stringify(cities)); 
  }

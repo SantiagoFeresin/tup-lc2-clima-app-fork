@@ -7,10 +7,10 @@
     <title>Clima App</title>
     <link rel="shortcut icon" href="img/solynube.svg" type="image/x-icon">
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/help.css">
-    <script src="js/common.js" defer></script>
-    <script src="js/pages/help.js" defer></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/help.css">
+    <script src="./js/common.js" defer></script>
+    <script src="./js/pages/help.js" defer></script>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
         <nav>
             <ul>
                 <li><a href="./index.html">Clima</a></li>
-                <li><a href="./add-city.html">Ciudad</a></li>
+                <li><a href="./add-city.html">Agregar Ciudad</a></li>
                 <li class="current-page"><a href="./help.html">Ayuda</a></li>
             </ul>
         </nav>
@@ -31,12 +31,13 @@
     <!-- Contenido principal de la página -->
     <main>
         <h2>Ayuda Clima App v.1.0</h2>
-        <p>Esta App te permite consultar el clima de una ciudad en particular usando la
-            API de <a href="https://openweathermap.org/api”" target="_blank">OpenWeatherMap</a>.
+        <p>
+            Esta App te permite consultar el clima de una ciudad en particular usando la API 
+            de <a href="https://openweathermap.org/api”" target="_blank">OpenWeatherMap</a>.
         </p>
         <p>
-            Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luego
-            seleccionar la Ciudad en cuestión desde la página <a href="index.html">Clima</a>.
+            Para poder consultar el clima, primero deberá <a href="./add-city.html">Agregar una ciudad</a> 
+            y luego seleccionar la Ciudad en cuestión desde la página <a href="./index.html">Clima</a>.
         </p>
         <section>
             <form action="">
@@ -71,7 +72,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <textarea name="Mensaje" id="Mensaje" cols="30" rows="10"></textarea>
+                            <textarea name="Mensaje" id="Mensaje"></textarea>
                         </td>
                     </tr>
                     <tr class="botones">
