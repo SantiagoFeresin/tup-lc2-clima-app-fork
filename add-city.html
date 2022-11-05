@@ -9,7 +9,7 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/add-city.css">
-    <script src="./js/common.js" defer></script>
+    <script type="module" src="./js/common.js" defer></script>
     <script src="./js/pages/add-city.js" defer></script>
 </head>
 
@@ -40,7 +40,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" id="agregarCiudad" name="agregarCiudad">
+                            <input type="text" id="agregarCiudad" name="agregarCiudad" onsubmit="addNewCityToLocalStorage()">
                         </td>
                     </tr>
                     <td>
@@ -51,6 +51,7 @@
                 </table>
             </form>
         </section>
+        <div id="spinner" class="spin"></div>
         <div id="result" class="result"></div>
     </main>
     <footer>

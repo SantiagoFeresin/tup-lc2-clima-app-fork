@@ -1,41 +1,38 @@
-function getCitiesFromLocalStorage() { 
-    let cities = localStorage.getItem("CITIES"); 
-    if(cities) { 
-        cities = JSON.parse(cities); 
-    } else { 
-        cities = []; 
-    } 
-    return cities; 
+//import { consultarAPIclima, getCitiesFromLocalStorage } from "../common.js"; INTENTO FALLIDO DE IMPORTACION GLOBAL (requiere type="module")
+
+//const { getCitiesFromLocalStorage, consultarAPIclima } = await import("../common.js"); INTENTO FALLIDO DE IMPORTACION GLOBAL (requiere type="module")
+
+/*async () => {
+    const { getCitiesFromLocalStorage, consultarAPIclima } = await import("../common.js"); }; INTENTO FALLIDO DE IMPORTACION GLOBAL (no corre)*/
+
+async function Opciones() {
+    let { getCitiesFromLocalStorage } = await import("../common.js"); //Importacion en funcion :/
+    let seleccion = document.getElementById("SelecCiudad");
+    let ciudades = getCitiesFromLocalStorage();
+    for (let ciudad of ciudades) {
+        let opcion = document.createElement("option");
+        opcion.value = ciudad;
+        opcion.innerHTML = ciudad;
+        seleccion.appendChild(opcion);
+    }
 }
 
-var seleccion = document.getElementById("SelecCiudad");
-var cities = getCitiesFromLocalStorage()
+//Funcion para consultar la API
+async function Consultar() {
+    let { consultarAPIclima } = await import("../common.js"); //Importacion en funcion :/
+    let seleccion = document.getElementById("SelecCiudad").value;
 
-function agregar(ciudad) {
-    let opcion = document.createElement("option");
-    opcion.value = ciudad;
-    opcion.innerHTML = ciudad;
-    seleccion.appendChild(opcion);
-}
+    document.getElementById("card").style.display = "none";
+    document.getElementById("error").style.display = "none";
 
-for (let ciudad of cities) {
-    agregar(ciudad)
-}
+    //document.getElementById("spinner").style.display = "block";
+    let objeto = await consultarAPIclima(seleccion);
+    //document.getElementById("spinner").style.display = "none";
 
-
-let respuesta;
-async function consultarAPIclima() {
-    try {
-        let ciudad = document.getElementById("SelecCiudad").value;
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=a39893ad1a88e0da7a7a9b7d373a631f&units=metric&lang=es`;
-
-        respuesta = await fetch(url);
-        objeto = await respuesta.json();
-
-    } catch (error) {
-        document.getElementById("card").style.display = "none"
-    } finally {
-        document.getElementById("card").style.display = "block"
+    if (objeto.cod != 200) {
+        document.getElementById("error").style.display = "block";
+    } else {
+        document.getElementById("card").style.display = "block";
         document.getElementById("ciudad").innerHTML = objeto.name;
         document.getElementById("temp").innerHTML = `Temperatura: ${objeto.main.temp}°`;
         document.getElementById("feels_like").innerHTML = `Sensación térmica: ${objeto.main.feels_like}°`;
