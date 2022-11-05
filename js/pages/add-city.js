@@ -1,17 +1,17 @@
 async function addNewCityToLocalStorage() {
     let { getCitiesFromLocalStorage, consultarAPIclima } = await import("../common.js"); //Importacion en funcion :/
-    let cities = getCitiesFromLocalStorage(); 
-    let ciudadAgregada = document.getElementById("agregarCiudad").value
-    
+    let cities = getCitiesFromLocalStorage();
+    let ciudadAgregada = document.getElementById("agregarCiudad").value;
+
     document.getElementById("result").style.display = "none";
 
     //document.getElementById("spinner").style.display = "block";
     let codigo = (await consultarAPIclima(ciudadAgregada)).cod;
     //document.getElementById("spinner").style.display = "none";
 
-    
+
     document.getElementById("result").style.display = "block";
-    
+
     if (cities.includes(ciudadAgregada)) {
         document.getElementById("result").innerHTML = "La ciudad ingresada ya se encuentra almacenada";
         document.getElementById("result").style.backgroundColor = "#ffc107";
@@ -23,6 +23,5 @@ async function addNewCityToLocalStorage() {
         document.getElementById("result").innerHTML = "Ciudad agregada con éxito";
         document.getElementById("result").style.backgroundColor = "#28a745";
     }
-    localStorage.setItem("CITIES", JSON.stringify(cities)); 
- }
- 
+    localStorage.setItem("CITIES", JSON.stringify(cities));
+}
