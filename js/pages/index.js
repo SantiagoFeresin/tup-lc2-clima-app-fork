@@ -37,7 +37,7 @@ async function Consultar() {
         document.getElementById("temp").innerHTML = `Temperatura: ${objeto.main.temp}°`;
         document.getElementById("feels_like").innerHTML = `Sensación térmica: ${objeto.main.feels_like}°`;
         document.getElementById("humidity").innerHTML = `Humedad: ${objeto.main.humidity}%`;
-        document.getElementById("wind").innerHTML = `Velocidad del viento: ${(objeto.wind.speed * 1.60934).toFixed(2)}km/h`;
+        document.getElementById("wind").innerHTML = `Velocidad del viento: ${(objeto.wind.speed * 3.6).toFixed(2)}km/h`;
         document.getElementById("pressure").innerHTML = `Presión: ${objeto.main.pressure} P`;
     }
 }
